@@ -6,6 +6,7 @@ import lombok.*;
 import java.sql.Driver;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "bus")
@@ -14,12 +15,13 @@ import java.util.List;
 @Builder
 @Getter
 public class Bus {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date departure_Date;
     private String seat_type;
-    private Long route_id;
-    private Long driver_id;
+    private String departure_terminal;
+    private String destination_terminal;
+    private UUID driver_id;
     @OneToMany(mappedBy = "bus")
     private List<Seat> seatList;
 }

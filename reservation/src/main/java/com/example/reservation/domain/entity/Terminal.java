@@ -5,8 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
-//@Entity
-//@Table(name = "terminal")
+@Entity
+@Table(name = "terminal")
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
