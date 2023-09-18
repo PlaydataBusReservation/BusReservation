@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Getter
 @NoArgsConstructor
@@ -12,6 +13,19 @@ import java.util.Date;
 public class BusRequest {
     private Date departureDate;
     private String seatType;
-    private Long routeId;
-    private Long driverId;
+    private String departureTerminal;
+    private String destinationTerminal;
+    private UUID driverId;
+
+    @Override
+    public String toString() {
+        return "BusRequest{" +
+                "departureDate=" + departureDate +
+                ", seatType='" + seatType + '\'' +
+                ", departureTerminal='" + departureTerminal + '\'' +
+                ", destinationTerminal='" + destinationTerminal + '\'' +
+                ", driverId=" + driverId +
+                '}';
+    }
 }
+

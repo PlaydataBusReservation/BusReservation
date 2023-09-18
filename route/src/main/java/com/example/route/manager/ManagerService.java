@@ -1,6 +1,7 @@
 package com.example.route.manager;
 
 
+import com.example.route.global.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ public class ManagerService {
 
     private final ManagerRepository managerRepository;
 
-    public void saveManager(ManagerRequest request) {
-        managerRepository.save(request.toEntity());
+    public void saveManager(SignUpRequest request) {
+        managerRepository.save(request.toManager());
     }
 }

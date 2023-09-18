@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/terminal")
+@RequestMapping("/api/v1/driver/terminal")
 public class TerminalController {
 
     private final TerminalService terminalService;

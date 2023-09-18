@@ -3,20 +3,17 @@ package com.example.route.bus;
 
 import com.example.route.client.BusRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/bus")
+@RequestMapping("/api/v1/driver/bus")
 public class BusController {
-    private BusService busService;
+    private final BusService busService;
 
-    @GetMapping
+
     @PostMapping
-    public void busSave(BusRequest request){
+    public void busSave(@RequestBody BusRequest request){
         busService.save(request);
     }
 

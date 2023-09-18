@@ -1,6 +1,5 @@
 package com.example.route.terminal;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

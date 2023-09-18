@@ -1,5 +1,6 @@
 package com.example.route.driver;
 
+import com.example.route.global.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class DriveController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void saveDriver(@RequestBody DriverRequest request){
+    public void saveDriver(@RequestBody SignUpRequest request){
         driverService.saveDriver(request);
     }
 

@@ -1,5 +1,6 @@
 package com.example.route.driver;
 
+import com.example.route.global.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,8 @@ public class DriverService {
         return driverRepository.findAll();
     }
 
-    public void saveDriver(DriverRequest request) {
-        driverRepository.save(request.toEntity());
+    public void saveDriver(SignUpRequest request) {
+        driverRepository.save(request.toDriver());
     }
 
 

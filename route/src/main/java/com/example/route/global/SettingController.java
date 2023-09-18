@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/setting")
+@RequestMapping("/api/v1/driver/setting")
 public class SettingController {
 
     private final RestTemplate restTemplate;
