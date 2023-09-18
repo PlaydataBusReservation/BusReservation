@@ -1,0 +1,29 @@
+
+### 터미널 Api DB저장
+GET http://localhost:8082/api/v1/driver/setting/terminal
+Accept: application/json
+
+### 노선 Api DB저장
+GET http://localhost:8082/api/v1/driver/setting/route
+Accept: application/json
+
+### 회사조회
+GET http://localhost:8082/api/v1/driver/company
+Accept: application/json
+
+### 기사조회
+GET http://localhost:8082/api/v1/drive
+Accept: application/json
+
+### 터미널 목록 조회
+GET http://localhost:8082/api/v1/driver/terminal
+Accept: application/json
+
+### 노선 조회 ( 터미널 id 입력하면 갈수 있는 곳 조회 )
+POST http://localhost:8082/api/v1/driver/route
+Content-Type: application/json
+
+{
+  "terminalId" : 22
+}
+

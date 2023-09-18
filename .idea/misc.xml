@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+<<<<<<< HEAD
     <file type="web" url="file://$PROJECT_DIR$/auth" />
     <file type="web" url="file://$PROJECT_DIR$/ticket" />
+=======
+    <file type="web" url="file://$PROJECT_DIR$/route" />
+>>>>>>> d960a0dffca7e5b290ba15177bd31d8abdbd9421
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
