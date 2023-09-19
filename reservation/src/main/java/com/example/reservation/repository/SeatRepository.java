@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface SeatRepository extends JpaRepository<Seat, Long> {
-    public Optional<List<Seat>> getByBusidAndTerminalId(Long busId, Long terminalId);
+    public Optional<List<Seat>> getByBusid(Long busId);
 
     public Optional<Seat> getByBusidAndSeatNumber(Long busId, Integer seatNumber);
 }

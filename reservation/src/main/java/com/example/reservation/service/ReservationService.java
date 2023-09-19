@@ -27,9 +27,9 @@ public class ReservationService {
    private final SeatRepository seatRepository;
    private final BusRepository busRepository;
 
-    public List<SeatResponse> getBusSeatInfo(SeatRequest request){
+    public List<SeatResponse> getBusSeatInfo(Long busId){
        Optional<List<Seat>> optional =
-               seatRepository.getByBusidAndTerminalId(request.busId(), request.terminalId());
+               seatRepository.getByBusid(busId);
 
        return optional.get().stream()
                .map(SeatResponse::new).toList();

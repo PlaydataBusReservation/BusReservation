@@ -26,11 +26,11 @@ public class ReservationController {
     private final WebSocketController webSocketController;
 
     @GetMapping("/seat")
-    public List<SeatResponse> getSeatState(@RequestParam Long busId, @RequestParam Long terminalId){
+    public List<SeatResponse> getSeatState(@RequestParam Long busId){
         //토큰 유효성 검사 추가할것
 
         //버스 좌석 리스트 조회
-        return reservationService.getBusSeatInfo(new SeatRequest(busId, terminalId));
+        return reservationService.getBusSeatInfo(busId);
     }
 
     @PostMapping("/reservation")
